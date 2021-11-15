@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Zupanije u RH</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="webjars/jquery/3.3.1"></script>
+    <link rel="stylesheet" href="../static/stylesheet/stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">
+        <span class="naslov">Županije u RH</span>
+    </a>
+</nav>
+<input id="filterAll"></input><button onclick="filterAll()" class="btn btn-primary">Search all</button>
+<div>
+<table class="table table-hover" id="zupanijeTable">
+    <thead>
+        <tr>
+            <th> Naziv </th>
+            <th> Površina(km^2) </th>
+            <th> Broj Stanovnika </th>
+            <th> Sjedište </th>
+            <th> Broj gradova </th>
+            <th> Broj općina </th>
+            <th> Župan </th>
+            <th> Gustoća stanovništva(po km^2) </th>
+            <th> Broj članova u skupštini </th>
+            <th> Graniči sa morem </th>
+        </tr>
+    </thead>
+    <tr>
+            <td><input type="text" id="nazivZup" name="nazivZup"></td>
+            <td><input type="text" id="povrsina" name="povrsina"></td>
+            <td><input type="text" id="brStan" name="brStan"></td>
+            <td><input type="text" id="sjediste" name="sjediste"></td>
+            <td><input type="text" id="brGradova" name="brGradova"></td>
+            <td><input type="text" id="brOpcina" name="brOpcina"></td>
+            <td><input type="text" id="zupan" name="zupan"></td>
+            <td><input type="text" id="gustocaStan" name="gustocaStan"></td>
+            <td><input type="text" id="brojClan" name="brojClan"></td>
+            <td><input type="text" id="graniciSaMorem" name="graniciSaMorem"></td>
+            <td><button id="filterButton" onclick="filter()" class="btn btn-primary">Filter</button></td>
+            <td><form th:action="@{/downloadJsonZupanije}"><button class="btn btn-secondary">Export JSON</button></form></td>
+    </tr>
+    <tbody id="podatci">
+        <tr th:each="zupanija : ${zupanije}">
+            <td><span th:text="${zupanija.getNaziv()}"></span></td>
+            <td><span th:text="${zupanija.getPovrsina_km2()}"></span></td>
+            <td><span th:text="${zupanija.getBroj_stanovnika()}"></span></td>
+            <td><span th:text="${zupanija.getSjediste()}"></span></td>
+            <td><span th:text="${zupanija.getBroj_gradova()}"></span></td>
+            <td><span th:text="${zupanija.getBroj_opcina()}"></span></td>
+            <td><span th:text="${zupanija.getZupan()}"></span></td>
+            <td><span th:text="${zupanija.getGustoca_stanovnistva_pokm2()}"></span></td>
+            <td><span th:text="${zupanija.getBroj_clanova_u_skupstini()}"></span></td>
+            <td><span th:text="${zupanija.getGranici_sa_morem()}"></span></td>
+            <td><form th:action="@{/info}"><button class="btn btn-secondary" th:name="zupanija" th:value="${zupanija.getNaziv()}">Info</button></form></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<script>
+    function filter() {
+        // Declare variables
+        var input = new Array(10);
+        var  table, tr, td, i, j;
+
+        //uzimamo tekst iz text polja
+        input[0] = document.getElementById("nazivZup").value.toUpperCase();
+        input[1] = document.getElementById("povrsina").value.toUpperCase();
+        input[2] = document.getElementById("brStan").value.toUpperCase();
+        input[3] = document.getElementById("sjediste").value.toUpperCase();
+        input[4] = document.getElementById("brGradova").value.toUpperCase();
+        input[5] = document.getElementById("brOpcina").value.toUpperCase();
+        input[6] = document.getElementById("zupan").value.toUpperCase();
+        input[7] = document.getElementById("gustocaStan").value.toUpperCase();
+        input[8] = document.getElementById("brojClan").value.toUpperCase();
+        input[9] = document.getElementById("graniciSaMorem").value.toUpperCase();
+
+        console.log(input.toString());
+        table = document.getElementById("zupanijeTable");
+        tr = table.getElementsByTagName("tr");
+        console.log(tr);
+
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 2; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td"); //za svaki redak dohvati stupce
+
+            if((input[0] == "") &&
+                (input[1] == "") &&
+                (input[2] == "") &&
+                (input[3] == "") &&
+                (input[4] == "") &&
+                (input[5] == "") &&
+                (input[6] == "") &&
+                (input[7] == "") &&
+                (input[8] == "") &&
+                (input[9] == "")
+            ) {
+                for(j = 2; j < tr.length; j++){
+                    tr[j].style.display="";
+                }
+            }
+
+            if((input[0] == td[0].innerText.toUpperCase()) ||
+                (input[1] == td[1].innerText.toUpperCase()) ||
+                (input[2] == td[2].innerText.toUpperCase()) ||
+                (input[3] == td[3].innerText.toUpperCase()) ||
+                (input[4] == td[4].innerText.toUpperCase()) ||
+                (input[5] == td[5].innerText.toUpperCase()) ||
+                (input[6] == td[6].innerText.toUpperCase()) ||
+                (input[7] == td[7].innerText.toUpperCase()) ||
+                (input[8] == td[8].innerText.toUpperCase()) ||
+                (input[9] == td[9].innerText.toUpperCase())) {
+                tr[i].style.display = "";
+            }
+            else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+    function filterAll() {
+        // Declare variables
+        var input;
+        var  table, tr, td, i, j;
+
+        //uzimamo tekst iz text polja
+        input = document.getElementById("filterAll").value.toUpperCase();
+
+        console.log(input.toString());
+        table = document.getElementById("zupanijeTable");
+        tr = table.getElementsByTagName("tr");
+        console.log(tr);
+
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 2; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td"); //za svaki redak dohvati stupce
+
+            if((input == ""))
+             {
+                for(j = 2; j < tr.length; j++){
+                    tr[j].style.display="";
+                }
+            }
+
+            if((input == td[0].innerText.toUpperCase()) ||
+                (input == td[1].innerText.toUpperCase()) ||
+                (input == td[2].innerText.toUpperCase()) ||
+                (input == td[3].innerText.toUpperCase()) ||
+                (input == td[4].innerText.toUpperCase()) ||
+                (input == td[5].innerText.toUpperCase()) ||
+                (input == td[6].innerText.toUpperCase()) ||
+                (input == td[7].innerText.toUpperCase()) ||
+                (input == td[8].innerText.toUpperCase()) ||
+                (input == td[9].innerText.toUpperCase())) {
+                tr[i].style.display = "";
+            }
+            else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>

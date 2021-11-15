@@ -1,0 +1,2745 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": [
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "povrsina_km2": {
+            "type": "integer"
+          },
+          "broj_stanovnika": {
+            "type": "integer"
+          },
+          "sjediste": {
+            "type": "string"
+          },
+          "broj_gradova": {
+            "type": "integer"
+          },
+          "broj_opcina": {
+            "type": "integer"
+          },
+          "zupan": {
+            "type": "string"
+          },
+          "gustoca_stanovnistva_pokm2": {
+            "type": "number"
+          },
+          "broj_clanova_u_skupstini": {
+            "type": "integer"
+          },
+          "granici_sa_morem": {
+            "type": "string"
+          },
+          "gradovi": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "nazivg": {
+                    "type": "string"
+                  },
+                  "povrsinag_km2": {
+                    "type": "integer"
+                  },
+                  "broj_stanovnika_grada": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "nazivg",
+                  "povrsinag_km2",
+                  "broj_stanovnika_grada"
+                ]
+              }
+            ]
+          },
+          "susjednezupanije": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "susjedna_zupanija": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "susjedna_zupanija"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "naziv",
+          "povrsina_km2",
+          "broj_stanovnika",
+          "sjediste",
+          "broj_gradova",
+          "broj_opcina",
+          "zupan",
+          "gustoca_stanovnistva_pokm2",
+          "broj_clanova_u_skupstini",
+          "granici_sa_morem",
+          "gradovi",
+          "susjednezupanije"
+        ]
+      }
+    ]
+  }
