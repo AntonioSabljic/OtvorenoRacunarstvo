@@ -1,8 +1,15 @@
-# Županije u RH
-Naziv autora: Antonio Sabljić  
-Verzija: 1.0  
-Jezik: Hrvatski  
-Licenca: MIT  
+# Županije u RH  
+Ovaj rad je napravljen u svrhu laboratorijskih vježbi predmeta **Otvoreno računarstvo**.  
+Trenutno se koriste podatci popisa stanovništva iz 2011 godine.  
+
+|||
+| ----------- | ----------- |
+| Naziv autora | Antonio Sabljić |
+| Verzija | 2.0 |
+| Jezik | Hrvatski |
+| Licenca | MIT |
+| Ključne riječi | Županije, RH, JSON, CSV |
+
 | Atributi    | Opis        |
 | ----------- | ----------- |
 | naziv       | Naziv županije |
