@@ -16,9 +16,10 @@ public class ZupanijaService {
     public ZupanijaService(ZupanijaRepository zupanijaRepository) { this.zupanijaRepository = zupanijaRepository; }
 
     public Zupanija getZupanijaByName(String name) {
-        Optional<Zupanija> zup = zupanijaRepository.findZupanijaByNaziv(name);
-        if(zup.isPresent()) {
-            return zup.get();
+        Zupanija zup = zupanijaRepository.findZupanijaByNaziv(name);
+
+        if(zup != null) {
+            return zup;
         }
         else {
             return null;
@@ -26,7 +27,7 @@ public class ZupanijaService {
     }
 
     public List<Zupanija> getAllZupanija() {
-        List<Zupanija> allZupanija = zupanijaRepository.findAll(); //valjda vraca sve zupanije
+        List<Zupanija> allZupanija = zupanijaRepository.getAllZupanija();
         return allZupanija;
     }
 }

@@ -19,4 +19,31 @@ public class GradService {
         return allGrad;
     }
 
+    public List<Grad> getAllGrad() {
+        List<Grad> allGrad = gradRepository.findAll();
+        return allGrad;
+    }
+
+    public Grad getGradByName(String naziv) {
+        return gradRepository.findGradByNaziv(naziv);
+    }
+
+    public boolean addGrad(Grad grad) {
+        Integer flag;
+        flag = gradRepository.insertGrad(grad.getNazivG(), grad.getPovrsinag_km2(), grad.getBroj_stanovnika_grada(), grad.getNaziv_zupanije());
+        if(flag != 0) return true;
+        return false;
+    }
+    public boolean removeGrad(String nazivG) {
+        Integer flag = gradRepository.removeGradByNaziv(nazivG);
+        if(flag != 0) return true;
+        return false;
+    }
+
+    public boolean updateGradByName(Grad grad, String name) {
+        Integer flag = gradRepository.updateGradByNaziv(name, grad.getPovrsinag_km2(), grad.getBroj_stanovnika_grada(), grad.getNaziv_zupanije());
+        if(flag != 0) return true;
+        return false;
+    }
+
 }
