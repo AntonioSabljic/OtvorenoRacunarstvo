@@ -15,6 +15,8 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -39,10 +41,18 @@ public class ZupanijaController {
     }
 
 
-    @GetMapping ("/")
-    public String getIndex(Model model) {
+    @GetMapping (path="/")
+    public String getIndex(Model model, @AuthenticationPrincipal OidcUser principal) {
+        if(principal != null) {
+            model.addAttribute("profile", principal.getClaims());
+        }
         model.addAttribute("zupanije", zupanijaService.getAllZupanija());
         return "index";
+    }
+    @GetMapping(path = "/userinfo")
+    public String getUserInfo(Model model, @AuthenticationPrincipal OidcUser principal) {
+        model.addAttribute("profile", principal.getClaims());
+        return "userinfo";
     }
     @ResponseBody
     @GetMapping ("/zupanije")
