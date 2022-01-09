@@ -1,5 +1,14 @@
 package com.otvrac.backend.controllers;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.BeanDescription;
+import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationConfig;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.fasterxml.jackson.databind.ser.BeanSerializerModifier;
+import com.fasterxml.jackson.databind.ser.std.BeanSerializerBase;
 import com.otvrac.backend.domain.Grad;
 import com.otvrac.backend.domain.Zupanija;
 import com.otvrac.backend.payroll.GradNotFoundException;
@@ -9,6 +18,8 @@ import com.otvrac.backend.payroll.ZupanijeNotFoundException;
 import com.otvrac.backend.services.GradService;
 import com.otvrac.backend.services.ZupanijaService;
 import com.otvrac.backend.services.Zupanija_susjedne_zupanijeService;
+import de.escalon.hypermedia.hydra.serialize.JacksonHydraSerializer;
+import jdk.jfr.ContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -20,7 +31,6 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -70,6 +80,22 @@ public class ZupanijaController {
         return CollectionModel.of(zaReturn, linkTo(methodOn(ZupanijaController.class).getZupanije()).withSelfRel());
     }
     @ResponseBody
+    @GetMapping (value = "/zupanije/jsonld", produces="application/json")
+    public String getZupanijeJsonLd() throws JsonProcessingException {
+        List<Zupanija> zupanije = zupanijaService.getAllZupanija();
+        if(zupanije == null) {
+            throw new ZupanijeNotFoundException();
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(getJacksonHydraSerializerModule());
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
+        String zupanijaJsonLd = objectMapper.writeValueAsString(zupanije);
+
+        return zupanijaJsonLd;
+    }
+    @ResponseBody
     @GetMapping("/zupanije/{name}")
     public EntityModel<Zupanija> getZupanija(@PathVariable String name) {
         Zupanija z = zupanijaService.getZupanijaByName(name.substring(1,name.length()-1));
@@ -81,6 +107,24 @@ public class ZupanijaController {
         return EntityModel.of(z,
                 linkTo(methodOn(ZupanijaController.class).getZupanija(name)).withSelfRel(),
                 linkTo(methodOn(ZupanijaController.class).getZupanije()).withRel("zupanije"));
+    }
+
+    @ResponseBody
+    @GetMapping(value = "/zupanije/{name}/jsonld", produces="application/json")
+    public String getZupanijaJsonLd(@PathVariable String name) throws JsonProcessingException {
+        Zupanija z = zupanijaService.getZupanijaByName(name.substring(1,name.length()-1));
+
+        if(z == null) {
+            throw new ZupanijaNotFoundException(name.substring(1,name.length()-1));
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(getJacksonHydraSerializerModule());
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
+        String zupanijaJsonLd = objectMapper.writeValueAsString(z);
+
+        return zupanijaJsonLd;
     }
     @ResponseBody
     @GetMapping("/gradovi")
@@ -97,6 +141,21 @@ public class ZupanijaController {
 
         return CollectionModel.of(zaReturn, linkTo(methodOn(ZupanijaController.class).getGradovi()).withSelfRel());
     }
+    @ResponseBody
+    @GetMapping(value = "/gradovi/jsonld", produces="application/json")
+    public String getGradoviJsonLd() throws JsonProcessingException {
+        List<Grad> g = gradService.getAllGrad();
+        if(g == null) {
+            throw new GradoviNotFoundException();
+        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(getJacksonHydraSerializerModule());
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
+        String gradoviJsonLd = objectMapper.writeValueAsString(g);
+
+        return gradoviJsonLd;
+    }
 
     @ResponseBody
     @GetMapping("/gradovi/{name}")
@@ -110,6 +169,23 @@ public class ZupanijaController {
         return EntityModel.of(g,
                 linkTo(methodOn(ZupanijaController.class).getGrad(name)).withSelfRel(),
                 linkTo(methodOn(ZupanijaController.class).getGradovi()).withRel("gradovi"));
+    }
+    @ResponseBody
+    @GetMapping(value = "/gradovi/{name}/jsonld", produces="application/json")
+    public String getGradJsonLd(@PathVariable String name) throws JsonProcessingException {
+        Grad g = gradService.getGradByName(name.substring(1,name.length()-1));
+
+        if(g == null) {
+            throw new GradNotFoundException(name);
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(getJacksonHydraSerializerModule());
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
+        String gradJsonLd = objectMapper.writeValueAsString(g);
+
+        return gradJsonLd;
     }
 
     @ResponseBody
@@ -128,6 +204,24 @@ public class ZupanijaController {
                 .collect(Collectors.toList());
 
         return CollectionModel.of(zaReturn, linkTo(methodOn(ZupanijaController.class).getGradoviForZupanija(name)).withSelfRel());
+    }
+
+    @ResponseBody
+    @GetMapping(value = "/zupanije/{name}/gradovi/jsonld", produces="application/json")
+    public String getGradoviForZupanijaJsonLd(@PathVariable String name) throws JsonProcessingException {
+        List<Grad> g = gradService.getAllGradForZupanija(name.substring(1,name.length()-1));
+
+        if(g == null) {
+            throw new ZupanijaNotFoundException(name.substring(1,name.length()-1));
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(getJacksonHydraSerializerModule());
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
+        String gradoviJsonLd = objectMapper.writeValueAsString(g);
+
+        return gradoviJsonLd;
     }
     @PostMapping("/gradovi")
     @ResponseBody
@@ -174,4 +268,27 @@ public class ZupanijaController {
     }
     //path za openapi /api-docs
     //swagger path /swagger-ui.html
+
+    SimpleModule getJacksonHydraSerializerModule() {
+        return new SimpleModule() {
+            @Override
+            public void setupModule(SetupContext context) {
+                super.setupModule(context);
+
+                context.addBeanSerializerModifier(new BeanSerializerModifier() {
+                    @Override
+                    public JsonSerializer<?> modifySerializer(
+                            SerializationConfig config,
+                            BeanDescription beanDesc,
+                            JsonSerializer<?> serializer) {
+                        if (serializer instanceof BeanSerializerBase) {
+                            return new JacksonHydraSerializer((BeanSerializerBase) serializer);
+                        } else {
+                            return serializer;
+                        }
+                    }
+                });
+            }
+        };
+    }
 }

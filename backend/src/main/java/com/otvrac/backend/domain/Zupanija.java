@@ -1,9 +1,16 @@
 package com.otvrac.backend.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import de.escalon.hypermedia.hydra.mapping.ContextProvider;
+import de.escalon.hypermedia.hydra.mapping.Expose;
+import de.escalon.hypermedia.hydra.mapping.Vocab;
+
 import javax.persistence.*;
 
 @Entity
 @Table
+@Vocab("https://schema.org/State")
+@Expose("state")
 public class Zupanija {
     @Id
     private String naziv;
@@ -42,7 +49,7 @@ public class Zupanija {
         this.broj_clanova_u_skupstini = broj_clanova_u_skupstini;
         this.granici_sa_morem = granici_sa_morem;
     }
-
+    @Expose("name")
     public String getNaziv() {
         return naziv;
     }

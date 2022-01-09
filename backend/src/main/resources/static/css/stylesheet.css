@@ -19,18 +19,94 @@ h3 {
 
 .avatar {
     vertical-align: middle;
-    width: 50px;
-    height: 50px;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
 }
 
 .userinfo {
-    display: grid;
-    grid-column-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb( 255, 255, 255, .15);
+    width: 21em;
+    padding: 2em;
+    border-radius: 10%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+}
+.userinfopage {
+    background-image: url("../images/backgroundSea.jpg");
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /*centers items on the line (the x-axis by default)*/
+    align-items: center; /*centers items on the cross-axis (y by default)*/
+
 }
 .user {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
+.username {
+    color: white;
+}
+
+.usermail {
+    color: white;
+}
+
+td.fitwidth {
+    width: 1px;
+    white-space: nowrap;
+}
+.fitwidth {
+    width: 1px;
+    white-space: nowrap;
+}
+.mainArea {
+    background-color: rgb(80, 80, 80);
+    background-repeat: repeat;
+}
+.navbar.mainnavbar {
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+}
+#naslov {
+    color:white;
+}
+.navbar-form.navbar-left {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: left;
+
+}
+.mb-3 {
+    margin-bottom: auto!important;
+}
+.input-group.mb-3 {
+    width: max-content;
+}
+.options-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    padding: 0.5rem;
+}
+
+.navbar.navbar-light.bg-light {
+    background-color: rgba(255, 255, 255, .15)!important;
+}
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: none;
+    border-width: auto;
+}

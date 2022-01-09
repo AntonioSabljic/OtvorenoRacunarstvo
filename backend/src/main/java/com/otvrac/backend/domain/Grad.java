@@ -1,11 +1,16 @@
 package com.otvrac.backend.domain;
 
+import de.escalon.hypermedia.hydra.mapping.Expose;
+import de.escalon.hypermedia.hydra.mapping.Vocab;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table
+@Vocab("https://schema.org/City")
+@Expose("city")
 public class Grad {
     @Id
     private String nazivG;
@@ -25,7 +30,7 @@ public class Grad {
         this.broj_stanovnika_grada = broj_stanovnika_grada;
         this.naziv_zupanije = naziv_zupanije;
     }
-
+    @Expose("name")
     public String getNazivG() {
         return nazivG;
     }
@@ -49,7 +54,6 @@ public class Grad {
     public void setBroj_stanovnika_grada(Integer broj_stanovnika_grada) {
         this.broj_stanovnika_grada = broj_stanovnika_grada;
     }
-
     public String getNaziv_zupanije() {
         return naziv_zupanije;
     }
